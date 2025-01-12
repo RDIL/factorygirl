@@ -1,6 +1,7 @@
 Test_task:
   container:
     image: node:20
+  Enable_Corepack_script: corepack enable
   Yarn_cache:
     populate_script: yarn
     folder: .yarn/cache
