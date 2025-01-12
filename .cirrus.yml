@@ -1,0 +1,7 @@
+Test_task:
+  container:
+    image: node:20
+  Yarn_cache:
+    populate_script: yarn
+    folder: .yarn/cache
+  Tests_script: yarn test

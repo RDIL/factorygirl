@@ -1,0 +1,14 @@
+/tmp
+/out-tsc
+
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vscode/*
+.yarn/unplugged
+.yarn/install-state.gz
+.yarn/cache
+.pnp.*
+dist
