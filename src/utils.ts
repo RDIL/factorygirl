@@ -1,6 +1,6 @@
 export type Utils = {
-    sequentialValue: (category?: string) => number
-    sequentialUuid: (category?: string) => string
+    sequentialValue: (category?: string | undefined) => number
+    sequentialUuid: (category?: string | undefined) => string
 }
 
 export function createUtils() {

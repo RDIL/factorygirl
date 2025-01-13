@@ -1,9 +1,15 @@
 {
   "name": "@rdil/factorygirl",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A solution for generating deterministic test data. Inspired by the factory_girl Ruby Gem.",
   "license": "MIT",
   "main": "dist/index.js",
+  "files": [
+    "README.md",
+    "dist/*",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "prepack": "tsc",
