@@ -11,11 +11,11 @@ export type FactoryCtor<T, TraitName extends string> = {
 export type Base<T> = CreateBase<T> | T
 export type CreateBase<T> = (utils: Utils) => T
 
-export function factory<T, TraitName extends string>(base: Base<T>, define: ({trait}: FactoryCtor<T, TraitName>) => void): (traits?: TraitName[]) => T {
+export function factory<T, TraitName extends string>(base: Base<T>, define?: ({trait}: FactoryCtor<T, TraitName>) => void): (traits?: TraitName[]) => T {
     const traitRegistry = new Map<string, TraitFuncOrInlineMod<T>>()
     const utils = createUtils()
 
-    define({
+    define?.({
         trait(name, mod) {
             if (traitRegistry.has(name)) {
                 throw new TypeError(`Trait ${name} has already been registered!`)

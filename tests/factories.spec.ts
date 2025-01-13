@@ -39,6 +39,12 @@ describe("factory defaults", () => {
     })
 })
 
+it("customizer is optional", () => {
+    const myFactory = factory<{ name: string }, "">({name: "hi"})
+
+    expect(myFactory().name).toEqual("hi")
+})
+
 describe("traits", () => {
     it("can have a basic trait (inline)", () => {
         const myFactory = factory<{ name: string, role: string }, "admin">(
