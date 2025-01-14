@@ -13,6 +13,7 @@ Publish_task:
     NPM_AUTH_TOKEN: ENCRYPTED[353723165fa54ebdd8c37ea05afa79ab339a963bfc61b053bb4e4fe15c1e5bcaf447a0ee07d77cf8572787efa35ba003]
   container:
     image: node:latest
+  Enable_Corepack_script: corepack enable
   Yarn_cache:
     folder: .yarn/cache
   Populate_script: yarn
