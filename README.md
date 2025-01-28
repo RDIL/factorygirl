@@ -8,8 +8,8 @@ A solution for generating deterministic test data. Inspired by the [`factory_gir
 
 Factory accepts 2 parameters:
 
-1. A function that creates the "base" (marker 1)
-2. A function that handles customization based on traits. (marker 2)
+1. A function that creates the "base" (or just the base as an object) (marker 1)
+2. (Optional) A function that handles customization based on traits. (marker 2)
 
 Here's an API example for an imaginary web portal for a library.
 
