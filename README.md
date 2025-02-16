@@ -11,6 +11,11 @@ Factory accepts 2 parameters:
 1. A function that creates the "base" (marker 1)
 2. A function that handles customization based on traits. (marker 2)
 
+And it returns a function, which then receives:
+
+1. Overrides - any properties to override from the base.
+2. Traits - a list of traits to apply.
+
 Here's an API example for an imaginary web portal for a library.
 
 ```ts
@@ -64,7 +69,10 @@ const createUser = factory<User, UserTraits>(
 )
 
 const myUser = createUser()
-const myUser2 = createUser(["has checked out books"])
+// with overrides:
+const myUserWithName = createUser({name: "Overridden Name"})
+// with a trait:
+const myUser2 = createUser({}, ["has checked out books"])
 ```
 
 ### Utils

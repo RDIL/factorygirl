@@ -1,5 +1,13 @@
 export type Utils = {
+    /**
+     * Create a sequential value.
+     * @param category The "category" string is used as a way to uniquely identify each counter.
+     */
     sequentialValue: (category?: string | undefined) => number
+    /**
+     * Create a sequential UUID v4.
+     * @param category The "category" string is used as a way to uniquely identify each counter.
+     */
     sequentialUuid: (category?: string | undefined) => string
 }
 
